@@ -1,0 +1,25 @@
+{
+  "name": "js-playground",
+  "version": "1.0.0",
+  "description": "Messing around with JavaScript, and trying not to break everything!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnNWarila/js-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnNWarila/js-playground/issues"
+  },
+  "homepage": "https://github.com/JohnNWarila/js-playground#readme",
+  "devDependencies": {
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-vue": "^5.2.1"
+  }
+}
