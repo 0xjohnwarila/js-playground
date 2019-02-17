@@ -1,9 +1,18 @@
 <script>
+import VUserSearchForm from "@/components/VUserSearchForm";
+import VUserProfile from "@/components/VUserProfile";
 export default {
-  name: "UserView"
+  name: "UserView",
+  components: {
+    VUserSearchForm,
+    VUserProfile
+  }
 };
 </script>
 
 <template>
-  <div>UserView</div>
+  <div>
+    <VUserSearchForm/>
+    <VUserProfile/>
+  </div>
 </template>
