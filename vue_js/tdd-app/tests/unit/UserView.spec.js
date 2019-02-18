@@ -5,7 +5,11 @@ import VUserProfile from "@/components/VUserProfile";
 
 describe("UserView", () => {
   const build = () => {
-    const wrapper = shallowMount(UserView);
+    const wrapper = shallowMount(UserView, {
+      data: () => ({
+        user: {}
+      })
+    });
 
     return {
       wrapper,
@@ -24,5 +28,16 @@ describe("UserView", () => {
 
     expect(userSearchForm().exists()).toBe(true);
     expect(userProfile().exists()).toBe(true);
+  });
+
+  it("passes a binded user prop to user profile component", () => {
+    const { wrapper, userProfile } = build();
+    wrapper.setData({
+      user: {
+        name: "Daniel"
+      }
+    });
+
+    expect(userProfile().vm.user).toBe(wrapper.vm.user);
   });
 });

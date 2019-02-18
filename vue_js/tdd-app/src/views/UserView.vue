@@ -6,6 +6,11 @@ export default {
   components: {
     VUserSearchForm,
     VUserProfile
+  },
+  data() {
+    return {
+      user: { name: "" }
+    };
   }
 };
 </script>
@@ -13,6 +18,6 @@ export default {
 <template>
   <div>
     <VUserSearchForm/>
-    <VUserProfile/>
+    <VUserProfile :user="user"/>
   </div>
 </template>
