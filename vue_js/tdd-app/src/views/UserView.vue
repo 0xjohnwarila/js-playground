@@ -1,4 +1,5 @@
 <script>
+import { mapState } from "vuex";
 import VUserSearchForm from "@/components/VUserSearchForm";
 import VUserProfile from "@/components/VUserProfile";
 export default {
@@ -7,10 +8,10 @@ export default {
     VUserSearchForm,
     VUserProfile
   },
-  data() {
-    return {
-      user: { name: "" }
-    };
+  computed: {
+    ...mapState({
+      user: "user"
+    })
   }
 };
 </script>
