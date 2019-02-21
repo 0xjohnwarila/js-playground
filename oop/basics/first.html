@@ -8,18 +8,14 @@
   <body>
     <p>This example requires you to enter commands in your browser"s JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
     <script>
-      const person = {
-        name: ["Bob", "Smith"],
-        age: 32,
-        gender: "male",
-        interests: ["music", "skiing"],
-        bio: function() {
-          alert(this.name[0] + " " + this.name[1] + " is " + this.age + " years old. He likes " + this.interests[0] + " and " + this.interests[1] + ".");
-        },
-        greeting: function() {
-          alert("Hi! I'm " + this.name[0] + ".");
-        }
-      };
+      function createNewPerson(name) {
+        var obj = {};
+        obj.name = name;
+        obj.greeting = function() {
+          alert("Hi I'm " + obj.name + ".");
+        };
+        return obj;
+      }
     </script>
   </body>
 </html>
