@@ -11,7 +11,7 @@ exports.genre_list = function (req, res, next) {
         return next(err);
       }
       // success -> render
-      res.render('genre_list', { title: 'Genre Lits', genre_list: list_genre });
+      res.render('genre_list', { title: 'Genre List', genre_list: list_genre });
     });
 };
 
