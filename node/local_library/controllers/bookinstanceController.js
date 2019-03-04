@@ -1,8 +1,19 @@
 const BookInstance = require('../models/bookinstance');
 
 // display list of all bookinstances
-exports.bookinstance_list = function (req, res) {
-  res.send('NOT IMPLEMENTED: BookInstance list');
+exports.bookinstance_list = function (req, res, next) {
+  BookInstance.find()
+    .populate('book')
+    .exec((err, list_bookinstances) => {
+      if (err) {
+        return next(err);
+      }
+      // success -> render
+      res.render('bookinstance_list', {
+        title: 'Book Instance List',
+        bookinstance_list: list_bookinstances,
+      });
+    });
 };
 
 // display detail page for a specific bookinstance
